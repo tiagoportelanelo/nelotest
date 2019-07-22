@@ -73,7 +73,7 @@ app.layout = html.Div([
 ], style={'width': '60%'})
 
 
-
+'''
 @app.callback(Output('var-plot', 'figure'),
               [Input('atributes-list', 'value')])
 def update_figure(value):
@@ -85,7 +85,7 @@ def update_figure(value):
                 ],
             }
             return figure
-
+'''
 
 if __name__ == '__main__':
     app.run_server(debug=True)
