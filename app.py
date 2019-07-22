@@ -11,6 +11,9 @@ from dash.dependencies import Input, Output, State
 import plotly.graph_objects as go
 
 
+app = dash.Dash()
+server = app.server
+
 
 # Load datasets
 train = pd.read_csv('train.csv', index_col ='PassengerId' )
@@ -87,8 +90,6 @@ def update_figure(value):
             return figure
 '''
 
-app = dash.Dash()
-server = app.server
 
 if __name__ == '__main__':
     app.run_server(debug=True)
